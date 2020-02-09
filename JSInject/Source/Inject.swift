@@ -8,11 +8,27 @@
 
 @propertyWrapper
 public struct Inject<Value: AnyObject> {
+    private var container: String
+    private var name: String?
+    
     /// Strong refer value
-    private let value: Value
+    private var value: Value
     public var wrappedValue: Value { value }
     
-    public init() {
-        value = Container.shared.resolve()
+    public init(name: String? = nil, container: String = Container.Name.default) {
+        self.container = container
+        self.name = name
+        
+        value = Container.shared.resolve(name: name, container: container)
+    }
+    
+    mutating public func setName(_ name: String?) {
+        value = Container.shared.resolve(name: name, container: container)
+        self.name = name
+    }
+    
+    mutating public func setContainer(_ container: String) {
+        value = Container.shared.resolve(name: name, container: container)
+        self.container = container
     }
 }

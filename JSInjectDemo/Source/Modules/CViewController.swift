@@ -33,7 +33,7 @@ class CView: UIView {
 
 class CViewController: UIViewController {
     // MARK: - property
-    @Inject var animal: Animal
+    @Inject(name: "stub") var animal: Animal
     
     // MARK: - lifecycle
     override func loadView() {
@@ -45,6 +45,7 @@ class CViewController: UIViewController {
         title = "C View Controller"
         
         print(animal.name)
+        animal.name = "Colin"
     }
     
     deinit {
