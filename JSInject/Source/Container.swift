@@ -92,7 +92,7 @@ public class Container {
     /// - parameters:
     ///   - container: name of container
     /// - returns: resolved object
-    public func resolve<Value: AnyObject>(
+    func resolve<Value: AnyObject>(
         name: String? = nil,
         container: String = Name.default
     ) -> Value {
