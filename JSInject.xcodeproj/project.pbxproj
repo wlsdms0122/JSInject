@@ -1,0 +1,961 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		592C70B5998C19031D29411B /* Pods_JSInjectDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B628750518B30092ECA4851F /* Pods_JSInjectDemo.framework */; };
+		6D65CCBCBC6B518673FE038C /* Pods_JSInjectDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24403EFE554301A53C1D6A20 /* Pods_JSInjectDemoTests.framework */; };
+		A60DD0EC5E85704DB0DAFBB1 /* Pods_JSInjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67ABCB76C6A029FE171F5A9E /* Pods_JSInjectTests.framework */; };
+		E39FDB79C0DCE0520E6A11E7 /* Pods_JSInject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29857D9F30C89DE08E0D86BD /* Pods_JSInject.framework */; };
+		F3FC1D1523EF176E00AF3DD9 /* JSInject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FC1D0B23EF176E00AF3DD9 /* JSInject.framework */; };
+		F3FC1D1A23EF176E00AF3DD9 /* JSInjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC1D1923EF176E00AF3DD9 /* JSInjectTests.swift */; };
+		F3FC1D1C23EF176E00AF3DD9 /* JSInject.h in Headers */ = {isa = PBXBuildFile; fileRef = F3FC1D0E23EF176E00AF3DD9 /* JSInject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3FC1D2C23EF178F00AF3DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC1D2B23EF178F00AF3DD9 /* AppDelegate.swift */; };
+		F3FC1D3023EF178F00AF3DD9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC1D2F23EF178F00AF3DD9 /* MainViewController.swift */; };
+		F3FC1D3523EF179100AF3DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3FC1D3423EF179100AF3DD9 /* Assets.xcassets */; };
+		F3FC1D3823EF179100AF3DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3FC1D3623EF179100AF3DD9 /* LaunchScreen.storyboard */; };
+		F3FC1D4323EF179100AF3DD9 /* JSInjectDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC1D4223EF179100AF3DD9 /* JSInjectDemoTests.swift */; };
+		F3FC1D5123EF1A1200AF3DD9 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC1D5023EF1A1200AF3DD9 /* Container.swift */; };
+		F3FC1D5323EF1A1800AF3DD9 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC1D5223EF1A1800AF3DD9 /* Inject.swift */; };
+		F3FC1D5C23EF21B000AF3DD9 /* JSInject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FC1D0B23EF176E00AF3DD9 /* JSInject.framework */; };
+		F3FC1D5E23EF2C8A00AF3DD9 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC1D5D23EF2C8A00AF3DD9 /* AViewController.swift */; };
+		F3FC1D6023EF2FE400AF3DD9 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC1D5F23EF2FE400AF3DD9 /* BViewController.swift */; };
+		F3FC1D6223EFBC8E00AF3DD9 /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC1D6123EFBC8E00AF3DD9 /* CViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3FC1D1623EF176E00AF3DD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3FC1D0223EF176E00AF3DD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3FC1D0A23EF176E00AF3DD9;
+			remoteInfo = JSInject;
+		};
+		F3FC1D3F23EF179100AF3DD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3FC1D0223EF176E00AF3DD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3FC1D2823EF178F00AF3DD9;
+			remoteInfo = JSInjectDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0982DE80392FA8E4BE3D260E /* Pods-JSInjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSInjectTests.debug.xcconfig"; path = "Target Support Files/Pods-JSInjectTests/Pods-JSInjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		24403EFE554301A53C1D6A20 /* Pods_JSInjectDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSInjectDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29857D9F30C89DE08E0D86BD /* Pods_JSInject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSInject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67ABCB76C6A029FE171F5A9E /* Pods_JSInjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSInjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8174EBD07881C4CD512B9826 /* Pods-JSInjectDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSInjectDemoTests.release.xcconfig"; path = "Target Support Files/Pods-JSInjectDemoTests/Pods-JSInjectDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		8A2773BB7EFA80EDBE0BAB57 /* Pods-JSInjectDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSInjectDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-JSInjectDemoTests/Pods-JSInjectDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		99CD0109DE9FFCCF82E7321B /* Pods-JSInjectDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSInjectDemo.debug.xcconfig"; path = "Target Support Files/Pods-JSInjectDemo/Pods-JSInjectDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B4F50EB2E5193853AD4F80CE /* Pods-JSInjectDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSInjectDemo.release.xcconfig"; path = "Target Support Files/Pods-JSInjectDemo/Pods-JSInjectDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B628750518B30092ECA4851F /* Pods_JSInjectDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSInjectDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54C31FEE36CAA0283A6365D /* Pods-JSInjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSInjectTests.release.xcconfig"; path = "Target Support Files/Pods-JSInjectTests/Pods-JSInjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		DEF297C76F65E502B6BB5706 /* Pods-JSInject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSInject.debug.xcconfig"; path = "Target Support Files/Pods-JSInject/Pods-JSInject.debug.xcconfig"; sourceTree = "<group>"; };
+		E4A9FB17551DF68754D7D559 /* Pods-JSInject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSInject.release.xcconfig"; path = "Target Support Files/Pods-JSInject/Pods-JSInject.release.xcconfig"; sourceTree = "<group>"; };
+		F3FC1D0B23EF176E00AF3DD9 /* JSInject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSInject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3FC1D0E23EF176E00AF3DD9 /* JSInject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSInject.h; sourceTree = "<group>"; };
+		F3FC1D0F23EF176E00AF3DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3FC1D1423EF176E00AF3DD9 /* JSInjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSInjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3FC1D1923EF176E00AF3DD9 /* JSInjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSInjectTests.swift; sourceTree = "<group>"; };
+		F3FC1D1B23EF176E00AF3DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3FC1D2923EF178F00AF3DD9 /* JSInjectDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSInjectDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3FC1D2B23EF178F00AF3DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3FC1D2F23EF178F00AF3DD9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F3FC1D3423EF179100AF3DD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3FC1D3723EF179100AF3DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3FC1D3923EF179100AF3DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3FC1D3E23EF179100AF3DD9 /* JSInjectDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSInjectDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3FC1D4223EF179100AF3DD9 /* JSInjectDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSInjectDemoTests.swift; sourceTree = "<group>"; };
+		F3FC1D4423EF179100AF3DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3FC1D5023EF1A1200AF3DD9 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		F3FC1D5223EF1A1800AF3DD9 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		F3FC1D5D23EF2C8A00AF3DD9 /* AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
+		F3FC1D5F23EF2FE400AF3DD9 /* BViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
+		F3FC1D6123EFBC8E00AF3DD9 /* CViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3FC1D0823EF176E00AF3DD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E39FDB79C0DCE0520E6A11E7 /* Pods_JSInject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3FC1D1123EF176E00AF3DD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FC1D1523EF176E00AF3DD9 /* JSInject.framework in Frameworks */,
+				A60DD0EC5E85704DB0DAFBB1 /* Pods_JSInjectTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3FC1D2623EF178F00AF3DD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FC1D5C23EF21B000AF3DD9 /* JSInject.framework in Frameworks */,
+				592C70B5998C19031D29411B /* Pods_JSInjectDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3FC1D3B23EF179100AF3DD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D65CCBCBC6B518673FE038C /* Pods_JSInjectDemoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33BAB75E7D6D19892A531D91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEF297C76F65E502B6BB5706 /* Pods-JSInject.debug.xcconfig */,
+				E4A9FB17551DF68754D7D559 /* Pods-JSInject.release.xcconfig */,
+				99CD0109DE9FFCCF82E7321B /* Pods-JSInjectDemo.debug.xcconfig */,
+				B4F50EB2E5193853AD4F80CE /* Pods-JSInjectDemo.release.xcconfig */,
+				8A2773BB7EFA80EDBE0BAB57 /* Pods-JSInjectDemoTests.debug.xcconfig */,
+				8174EBD07881C4CD512B9826 /* Pods-JSInjectDemoTests.release.xcconfig */,
+				0982DE80392FA8E4BE3D260E /* Pods-JSInjectTests.debug.xcconfig */,
+				C54C31FEE36CAA0283A6365D /* Pods-JSInjectTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5825FFE8F9C1D783DFB8D491 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29857D9F30C89DE08E0D86BD /* Pods_JSInject.framework */,
+				B628750518B30092ECA4851F /* Pods_JSInjectDemo.framework */,
+				24403EFE554301A53C1D6A20 /* Pods_JSInjectDemoTests.framework */,
+				67ABCB76C6A029FE171F5A9E /* Pods_JSInjectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3FC1D0123EF176E00AF3DD9 = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D2A23EF178F00AF3DD9 /* JSInjectDemo */,
+				F3FC1D4123EF179100AF3DD9 /* JSInjectDemoTests */,
+				F3FC1D0D23EF176E00AF3DD9 /* JSInject */,
+				F3FC1D1823EF176E00AF3DD9 /* JSInjectTests */,
+				F3FC1D0C23EF176E00AF3DD9 /* Products */,
+				33BAB75E7D6D19892A531D91 /* Pods */,
+				5825FFE8F9C1D783DFB8D491 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F3FC1D0C23EF176E00AF3DD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D0B23EF176E00AF3DD9 /* JSInject.framework */,
+				F3FC1D1423EF176E00AF3DD9 /* JSInjectTests.xctest */,
+				F3FC1D2923EF178F00AF3DD9 /* JSInjectDemo.app */,
+				F3FC1D3E23EF179100AF3DD9 /* JSInjectDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3FC1D0D23EF176E00AF3DD9 /* JSInject */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D4C23EF17A700AF3DD9 /* Source */,
+				F3FC1D4B23EF17A200AF3DD9 /* Support */,
+			);
+			path = JSInject;
+			sourceTree = "<group>";
+		};
+		F3FC1D1823EF176E00AF3DD9 /* JSInjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D1923EF176E00AF3DD9 /* JSInjectTests.swift */,
+				F3FC1D1B23EF176E00AF3DD9 /* Info.plist */,
+			);
+			path = JSInjectTests;
+			sourceTree = "<group>";
+		};
+		F3FC1D2A23EF178F00AF3DD9 /* JSInjectDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D4F23EF17D000AF3DD9 /* Resource */,
+				F3FC1D4E23EF17CB00AF3DD9 /* Source */,
+				F3FC1D4D23EF17C700AF3DD9 /* Support */,
+			);
+			path = JSInjectDemo;
+			sourceTree = "<group>";
+		};
+		F3FC1D4123EF179100AF3DD9 /* JSInjectDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D4223EF179100AF3DD9 /* JSInjectDemoTests.swift */,
+				F3FC1D4423EF179100AF3DD9 /* Info.plist */,
+			);
+			path = JSInjectDemoTests;
+			sourceTree = "<group>";
+		};
+		F3FC1D4B23EF17A200AF3DD9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D0E23EF176E00AF3DD9 /* JSInject.h */,
+				F3FC1D0F23EF176E00AF3DD9 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F3FC1D4C23EF17A700AF3DD9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D5023EF1A1200AF3DD9 /* Container.swift */,
+				F3FC1D5223EF1A1800AF3DD9 /* Inject.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F3FC1D4D23EF17C700AF3DD9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D3623EF179100AF3DD9 /* LaunchScreen.storyboard */,
+				F3FC1D3923EF179100AF3DD9 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F3FC1D4E23EF17CB00AF3DD9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D5423EF1A3600AF3DD9 /* App */,
+				F3FC1D5523EF1A3C00AF3DD9 /* Modules */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F3FC1D4F23EF17D000AF3DD9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D3423EF179100AF3DD9 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F3FC1D5423EF1A3600AF3DD9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D2B23EF178F00AF3DD9 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F3FC1D5523EF1A3C00AF3DD9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC1D2F23EF178F00AF3DD9 /* MainViewController.swift */,
+				F3FC1D5D23EF2C8A00AF3DD9 /* AViewController.swift */,
+				F3FC1D5F23EF2FE400AF3DD9 /* BViewController.swift */,
+				F3FC1D6123EFBC8E00AF3DD9 /* CViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F3FC1D0623EF176E00AF3DD9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FC1D1C23EF176E00AF3DD9 /* JSInject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F3FC1D0A23EF176E00AF3DD9 /* JSInject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3FC1D1F23EF176E00AF3DD9 /* Build configuration list for PBXNativeTarget "JSInject" */;
+			buildPhases = (
+				E0E8C0262D4EB6C2E298A7DF /* [CP] Check Pods Manifest.lock */,
+				F3FC1D0623EF176E00AF3DD9 /* Headers */,
+				F3FC1D0723EF176E00AF3DD9 /* Sources */,
+				F3FC1D0823EF176E00AF3DD9 /* Frameworks */,
+				F3FC1D0923EF176E00AF3DD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSInject;
+			productName = JSInject;
+			productReference = F3FC1D0B23EF176E00AF3DD9 /* JSInject.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3FC1D1323EF176E00AF3DD9 /* JSInjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3FC1D2223EF176E00AF3DD9 /* Build configuration list for PBXNativeTarget "JSInjectTests" */;
+			buildPhases = (
+				2AC1E2DB9785E97EB5EDB2BB /* [CP] Check Pods Manifest.lock */,
+				F3FC1D1023EF176E00AF3DD9 /* Sources */,
+				F3FC1D1123EF176E00AF3DD9 /* Frameworks */,
+				F3FC1D1223EF176E00AF3DD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3FC1D1723EF176E00AF3DD9 /* PBXTargetDependency */,
+			);
+			name = JSInjectTests;
+			productName = JSInjectTests;
+			productReference = F3FC1D1423EF176E00AF3DD9 /* JSInjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F3FC1D2823EF178F00AF3DD9 /* JSInjectDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3FC1D4523EF179100AF3DD9 /* Build configuration list for PBXNativeTarget "JSInjectDemo" */;
+			buildPhases = (
+				8234057FE56D02793211CB03 /* [CP] Check Pods Manifest.lock */,
+				F3FC1D2523EF178F00AF3DD9 /* Sources */,
+				F3FC1D2623EF178F00AF3DD9 /* Frameworks */,
+				F3FC1D2723EF178F00AF3DD9 /* Resources */,
+				E62B4D1315272465B4F0BEE2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSInjectDemo;
+			productName = JSInjectDemo;
+			productReference = F3FC1D2923EF178F00AF3DD9 /* JSInjectDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3FC1D3D23EF179100AF3DD9 /* JSInjectDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3FC1D4823EF179100AF3DD9 /* Build configuration list for PBXNativeTarget "JSInjectDemoTests" */;
+			buildPhases = (
+				1B0F719DA9A4EDBA82593F3C /* [CP] Check Pods Manifest.lock */,
+				F3FC1D3A23EF179100AF3DD9 /* Sources */,
+				F3FC1D3B23EF179100AF3DD9 /* Frameworks */,
+				F3FC1D3C23EF179100AF3DD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3FC1D4023EF179100AF3DD9 /* PBXTargetDependency */,
+			);
+			name = JSInjectDemoTests;
+			productName = JSInjectDemoTests;
+			productReference = F3FC1D3E23EF179100AF3DD9 /* JSInjectDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3FC1D0223EF176E00AF3DD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = JSilver;
+				TargetAttributes = {
+					F3FC1D0A23EF176E00AF3DD9 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					F3FC1D1323EF176E00AF3DD9 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					F3FC1D2823EF178F00AF3DD9 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					F3FC1D3D23EF179100AF3DD9 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = F3FC1D2823EF178F00AF3DD9;
+					};
+				};
+			};
+			buildConfigurationList = F3FC1D0523EF176E00AF3DD9 /* Build configuration list for PBXProject "JSInject" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3FC1D0123EF176E00AF3DD9;
+			productRefGroup = F3FC1D0C23EF176E00AF3DD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3FC1D0A23EF176E00AF3DD9 /* JSInject */,
+				F3FC1D1323EF176E00AF3DD9 /* JSInjectTests */,
+				F3FC1D2823EF178F00AF3DD9 /* JSInjectDemo */,
+				F3FC1D3D23EF179100AF3DD9 /* JSInjectDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3FC1D0923EF176E00AF3DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3FC1D1223EF176E00AF3DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3FC1D2723EF178F00AF3DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FC1D3823EF179100AF3DD9 /* LaunchScreen.storyboard in Resources */,
+				F3FC1D3523EF179100AF3DD9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3FC1D3C23EF179100AF3DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B0F719DA9A4EDBA82593F3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JSInjectDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AC1E2DB9785E97EB5EDB2BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JSInjectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8234057FE56D02793211CB03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JSInjectDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0E8C0262D4EB6C2E298A7DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JSInject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E62B4D1315272465B4F0BEE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JSInjectDemo/Pods-JSInjectDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JSInjectDemo/Pods-JSInjectDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JSInjectDemo/Pods-JSInjectDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3FC1D0723EF176E00AF3DD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FC1D5123EF1A1200AF3DD9 /* Container.swift in Sources */,
+				F3FC1D5323EF1A1800AF3DD9 /* Inject.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3FC1D1023EF176E00AF3DD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FC1D1A23EF176E00AF3DD9 /* JSInjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3FC1D2523EF178F00AF3DD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FC1D3023EF178F00AF3DD9 /* MainViewController.swift in Sources */,
+				F3FC1D5E23EF2C8A00AF3DD9 /* AViewController.swift in Sources */,
+				F3FC1D6223EFBC8E00AF3DD9 /* CViewController.swift in Sources */,
+				F3FC1D2C23EF178F00AF3DD9 /* AppDelegate.swift in Sources */,
+				F3FC1D6023EF2FE400AF3DD9 /* BViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3FC1D3A23EF179100AF3DD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FC1D4323EF179100AF3DD9 /* JSInjectDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3FC1D1723EF176E00AF3DD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3FC1D0A23EF176E00AF3DD9 /* JSInject */;
+			targetProxy = F3FC1D1623EF176E00AF3DD9 /* PBXContainerItemProxy */;
+		};
+		F3FC1D4023EF179100AF3DD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3FC1D2823EF178F00AF3DD9 /* JSInjectDemo */;
+			targetProxy = F3FC1D3F23EF179100AF3DD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3FC1D3623EF179100AF3DD9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3FC1D3723EF179100AF3DD9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3FC1D1D23EF176E00AF3DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3FC1D1E23EF176E00AF3DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F3FC1D2023EF176E00AF3DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEF297C76F65E502B6BB5706 /* Pods-JSInject.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6VSLC69397;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JSInject/Support/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.framework.JSInject;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3FC1D2123EF176E00AF3DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4A9FB17551DF68754D7D559 /* Pods-JSInject.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6VSLC69397;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JSInject/Support/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.framework.JSInject;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F3FC1D2323EF176E00AF3DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0982DE80392FA8E4BE3D260E /* Pods-JSInjectTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VSLC69397;
+				INFOPLIST_FILE = JSInjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.framework.JSInjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3FC1D2423EF176E00AF3DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54C31FEE36CAA0283A6365D /* Pods-JSInjectTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VSLC69397;
+				INFOPLIST_FILE = JSInjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.framework.JSInjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F3FC1D4623EF179100AF3DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99CD0109DE9FFCCF82E7321B /* Pods-JSInjectDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VSLC69397;
+				INFOPLIST_FILE = JSInjectDemo/Support/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.framework.JSInjectDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F3FC1D4723EF179100AF3DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F50EB2E5193853AD4F80CE /* Pods-JSInjectDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VSLC69397;
+				INFOPLIST_FILE = JSInjectDemo/Support/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.framework.JSInjectDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F3FC1D4923EF179100AF3DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A2773BB7EFA80EDBE0BAB57 /* Pods-JSInjectDemoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VSLC69397;
+				INFOPLIST_FILE = JSInjectDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.framework.JSInjectDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSInjectDemo.app/JSInjectDemo";
+			};
+			name = Debug;
+		};
+		F3FC1D4A23EF179100AF3DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8174EBD07881C4CD512B9826 /* Pods-JSInjectDemoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VSLC69397;
+				INFOPLIST_FILE = JSInjectDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jsilver.framework.JSInjectDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSInjectDemo.app/JSInjectDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3FC1D0523EF176E00AF3DD9 /* Build configuration list for PBXProject "JSInject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3FC1D1D23EF176E00AF3DD9 /* Debug */,
+				F3FC1D1E23EF176E00AF3DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3FC1D1F23EF176E00AF3DD9 /* Build configuration list for PBXNativeTarget "JSInject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3FC1D2023EF176E00AF3DD9 /* Debug */,
+				F3FC1D2123EF176E00AF3DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3FC1D2223EF176E00AF3DD9 /* Build configuration list for PBXNativeTarget "JSInjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3FC1D2323EF176E00AF3DD9 /* Debug */,
+				F3FC1D2423EF176E00AF3DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3FC1D4523EF179100AF3DD9 /* Build configuration list for PBXNativeTarget "JSInjectDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3FC1D4623EF179100AF3DD9 /* Debug */,
+				F3FC1D4723EF179100AF3DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3FC1D4823EF179100AF3DD9 /* Build configuration list for PBXNativeTarget "JSInjectDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3FC1D4923EF179100AF3DD9 /* Debug */,
+				F3FC1D4A23EF179100AF3DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3FC1D0223EF176E00AF3DD9 /* Project object */;
+}

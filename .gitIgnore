@@ -1,0 +1,39 @@
+# Created by https://www.gitignore.io/api/git,xcode,macos,cocoapods
+# Edit at https://www.gitignore.io/?templates=git,xcode,macos,cocoapods
+
+### CocoaPods ###
+Pods/
+
+### macOS ###
+# General
+.DS_Store
+
+### Xcode ###
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+## Xcode Patch
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
+### Xcode Patch ###
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# End of https://www.gitignore.io/api/git,xcode,macos,cocoapods
