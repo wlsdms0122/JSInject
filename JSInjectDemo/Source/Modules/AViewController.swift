@@ -59,7 +59,8 @@ class AViewController: UIViewController {
     private var nextButton: UIButton { aView.nextButton }
     
     // MARK: - property
-    @Inject var animal: Animal
+    @Inject()
+    var animal: Animal
     
     private var disposeBag: DisposeBag = DisposeBag()
     

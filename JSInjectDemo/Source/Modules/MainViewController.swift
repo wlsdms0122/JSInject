@@ -109,7 +109,7 @@ class MainViewController: UIViewController {
         
         twoButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                let viewController = BViewController()
+                let viewController = UINavigationController(rootViewController: BViewController())
                 self?.present(viewController, animated: true)
             })
             .disposed(by: disposeBag)

@@ -23,13 +23,26 @@ class Animal {
     }
 }
 
+class Rabbit: Animal {
+    override init(_ name: String) {
+        super.init(name)
+    }
+}
+
+class Sloth: Animal {
+    override init(_ name: String) {
+        super.init(name)
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Register services into container
-        Container.shared.register(Animal.self, scope: .global) { Animal("Steve") }
+        Container.shared.register(Animal.self, name: "stub") { Rabbit("Steve") }
+        Container.shared.register(Animal.self) { Sloth("John") }
 //        Container.shared.register(Animal.self, scope: .retain) { Animal("Steve") }
 //        Container.shared.register(Animal.self, scope: .property) { Animal("Steve") }
         
