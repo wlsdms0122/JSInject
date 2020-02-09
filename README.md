@@ -21,11 +21,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
+Support options like multi container or multi dependency using name.
+```swift
+public class Container {
+    public func register<Value: AnyObject>(
+        _ type: Value.Type,
+        scope: Scope = .global,
+        name: String? = nil,
+        container: String = Name.default,
+        factory: @escaping () -> Value
+    )
+    ...
+}
+```
+
 ### Inject
 You can injected using `@Inject` property wrapper.
 ```swift
 class AnyClass {
-    @Inject var animal: Animal
+    @Inject()
+    var animal: Animal
+    
+    @Inject(name: "stub") 
+    var animal: Animal
+    
+    @Inject(name: "stub", container: "test") 
+    var animal: Animal
+}
+```
+
+If you want to decide kind of dependency inject when instantiate a object, use `setName()` or `setContainer()`
+
+```swift
+class AnyClass {
+    @Inject()
+    var animal: Animal
+
+    init(isTest: Bool) {
+        if isTest {
+            // Get origin property wrapper object using '_' prefix.
+            _animal.setName("test")
+        }
+    }
 }
 ```
 
@@ -40,11 +77,6 @@ public enum Scope {
     case retain
     case property
 }
-
-public class Container {
-    public func register<Value: AnyObject>(_ type: Value.Type, scope: Scope = .global, factory: @escaping () -> Value)
-    ...
-}
 ```
 
 - `.global`
@@ -56,8 +88,6 @@ public class Container {
     
 If you want to see how to work it, See demo application.
 
-# To Do
-- testable
 
 # Reference
 I was inspired this [post](https://basememara.com/swift-dependency-injection-via-property-wrapper/).
