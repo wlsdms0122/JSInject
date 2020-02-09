@@ -62,7 +62,7 @@ public class Container {
     
     // MARK: - constructor
     private init() {
-        containers["default"] = [:]
+        containers[Name.default] = [:]
     }
     
     // MARK: - public
@@ -78,10 +78,11 @@ public class Container {
     public func register<Value: AnyObject>(
         _ type: Value.Type,
         scope: Scope = .global,
+        name: String? = nil,
         container: String = Name.default,
         factory: @escaping () -> Value
     ) {
-        let key = String(describing: Value.self)
+        let key = makeKey(type, name: name)
         let dependency = makeDependency(scope: scope, factory: factory)
         
         register(key: key, dependency: dependency, container: container)
@@ -92,13 +93,22 @@ public class Container {
     ///   - container: name of container
     /// - returns: resolved object
     public func resolve<Value: AnyObject>(
+        name: String? = nil,
         container: String = Name.default
     ) -> Value {
-        let key = String(describing: Value.self)
+        let key = makeKey(Value.self, name: name)
         return resolve(key: key, container: container)
     }
     
     // MARK: - private
+    private func makeKey<Value>(_ type: Value.Type, name: String?) -> String {
+        let key = String(describing: type)
+        if let name = name {
+            return "\(key)_\(name)"
+        }
+        return key
+    }
+    
     /// Make a dependency
     /// - parameters:
     ///   - scope: scope that object living (default: `.global`)
