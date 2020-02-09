@@ -37,3 +37,4 @@ DerivedData/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.gitignore.io/api/git,xcode,macos,cocoapods
+*.podspec

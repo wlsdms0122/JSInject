@@ -1,11 +1,13 @@
 # JSInject
-![release](https://img.shields.io/badge/Release-Yet-red)
+![release](https://img.shields.io/badge/Release-1.1.0-green)
 
 This is `Swift` DI (Dependency Injection) container using `@propertyWrapper` of `Swift 5.1`.
 
 # Installation
 ### Cocoapods
-Sorry. not support `CocoaPods` yet.
+```
+pod 'JSInject'
+```
 
 # Usage
 ### Register
