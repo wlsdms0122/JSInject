@@ -12,7 +12,7 @@ public struct Inject<Value: AnyObject> {
     private let value: Value
     public var wrappedValue: Value { value }
     
-    public init() {
-        value = Container.shared.resolve()
+    public init(container: String = Container.Name.default) {
+        value = Container.shared.resolve(container: container)
     }
 }
