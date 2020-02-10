@@ -12,9 +12,18 @@ public struct Inject<Value: AnyObject> {
     private var name: String?
     
     /// Strong refer value
-    private lazy var value: Value = Container.shared.resolve(name: name, container: container)
+    private var value: Value?
     public var wrappedValue: Value {
-        mutating get { value }
+        mutating get {
+            if let value = value {
+                return value
+            }
+            
+            let value: Value = Container.shared.resolve(name: name, container: container)
+            self.value = value
+            
+            return value
+        }
     }
     
     public init(name: String? = nil, container: String = Container.Name.default) {
@@ -23,12 +32,12 @@ public struct Inject<Value: AnyObject> {
     }
     
     mutating public func setName(_ name: String?) {
-        value = Container.shared.resolve(name: name, container: container)
         self.name = name
+        value = nil
     }
     
     mutating public func setContainer(_ container: String) {
-        value = Container.shared.resolve(name: name, container: container)
         self.container = container
+        value = nil
     }
 }
