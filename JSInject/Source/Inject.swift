@@ -7,7 +7,7 @@
 //
 
 @propertyWrapper
-public struct Inject<Value: AnyObject> {
+public struct Inject<Value> {
     private var container: String
     private var name: String?
     

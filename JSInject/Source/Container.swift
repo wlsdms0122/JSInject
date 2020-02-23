@@ -9,30 +9,36 @@
 import Foundation
 
 fileprivate protocol Dependency {
-    var value: AnyObject? { get set }
+    var value: Any? { get set }
     var scope: Scope { get }
-    var factory: () -> AnyObject { get }
+    var factory: () -> Any { get }
     
-    init(scope: Scope, _ factory: @escaping () -> AnyObject)
+    init(scope: Scope, _ factory: @escaping () -> Any)
 }
 
 fileprivate class StrongDependency: Dependency {
-    var value: AnyObject?
+    var value: Any?
     var scope: Scope
-    var factory: () -> AnyObject
+    var factory: () -> Any
     
-    required init(scope: Scope, _ factory: @escaping () -> AnyObject) {
+    required init(scope: Scope, _ factory: @escaping () -> Any) {
         self.scope = scope
         self.factory = factory
     }
 }
 
 fileprivate class WeakDependency: Dependency {
-    weak var value: AnyObject?
+    var value: Any? {
+        get { weakValue }
+        set { weakValue = newValue as AnyObject? }
+    }
     var scope: Scope
-    var factory: () -> AnyObject
+    var factory: () -> Any
     
-    required init(scope: Scope, _ factory: @escaping () -> AnyObject) {
+    /// Weak refered value
+    private weak var weakValue: AnyObject?
+    
+    required init(scope: Scope, _ factory: @escaping () -> Any) {
         self.scope = scope
         self.factory = factory
     }
@@ -75,7 +81,7 @@ public class Container {
     ///
     /// You can set scope if you want. default value is `.global`, it is live during app is living.
     /// `.local` scope is that object instantiate every time. `.retain` is that instantiate if not exist already instantiated object. It live by ratain cycle.
-    public func register<Value: AnyObject>(
+    public func register<Value>(
         _ type: Value.Type,
         scope: Scope = .global,
         name: String? = nil,
@@ -92,7 +98,7 @@ public class Container {
     /// - parameters:
     ///   - container: name of container
     /// - returns: resolved object
-    func resolve<Value: AnyObject>(
+    func resolve<Value>(
         name: String? = nil,
         container: String = Name.default
     ) -> Value {
@@ -114,7 +120,7 @@ public class Container {
     ///   - scope: scope that object living (default: `.global`)
     ///   - factory: closure to instantiate object
     /// - returns: a specific dependency by scope
-    private func makeDependency<Value: AnyObject>(scope: Scope, factory: @escaping () -> Value) -> Dependency {
+    private func makeDependency<Value>(scope: Scope, factory: @escaping () -> Value) -> Dependency {
         switch scope {
         case .global:
             return StrongDependency(scope: scope, factory)
@@ -159,7 +165,7 @@ public class Container {
     ///   - key: key of dependency
     ///   - name: name of container
     /// - returns: dependency
-    private func resolve<Value: AnyObject>(key: String, container name: String) -> Value {
+    private func resolve<Value>(key: String, container name: String) -> Value {
         // Get dependency from container named by `name`
         guard var dependency = getContainer(name: name)[key] else {
             fatalError("'\(Value.self)' dependency not registered in '\(name)' container.")
