@@ -1,5 +1,5 @@
 # JSInject
-![release](https://img.shields.io/badge/Release-1.1.1-green)
+![release](https://img.shields.io/badge/Release-1.2.0-green)
 
 This is `Swift` DI (Dependency Injection) container using `@propertyWrapper` of `Swift 5.1`.
 
